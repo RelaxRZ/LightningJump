@@ -15,6 +15,7 @@
 ### 20141127_Brisbane_6.csv -- CSV records the amount of lightning at each minute in Brisbane with range 6
 
 ## Lightning_TSPlot Folder
+### AMP Folder -- Plots of AMP amount of selected lightning types in specific area during the range of time
 ### ICCG_VS Folder -- Plots of number of IC vs CG in specific area during the selected time
 ### TS_CG Folder -- Plots of number of CG lightning in specific area during the selected time
 ### TS_IC Folder -- Plots of number of IC lightning in specific area during the selected time

@@ -158,3 +158,35 @@ def ICCG_Comp_Plot(start_min, end_min, date, location, width):
     # Show the plot
     plt.savefig("Lightning_TSPlot/ICCG_VS/" + date + "_" + location + "_" + str(width))
     plt.close()
+
+'''Function for plotting the AMP Amount TS curve'''
+def AMP_Plot(start_min, end_min, date, location, width, amp_type):
+    
+    # Read in the lightning TS csv with selected path
+    path = "Lightning_TSCSV/" + date + "_" + location + "_" + str(width) + ".csv"
+    TS_data = pd.read_csv(path)
+
+    # Collect the lightning TS data, including type IC, CG, and Total
+    amp_data = TS_data[amp_type]
+
+    # Collect the data points for plotting the line curve from the range of selected time
+    plot_amp = amp_data[start_min:end_min].tolist()
+
+    # Plot the curve and save it as time-series visulisation
+    # Set the X-axis Label
+    X_axis = [*range(start_min, end_min, 1)]
+
+    # Plot the Graph
+    plt.plot(X_axis, plot_amp, label = "curve " + amp_type)
+    plt.legend()
+
+    # naming the x axis
+    plt.xlabel('Minute Starts from: ' + str(start_min) + '~' + str(end_min))
+    # naming the y axis
+    plt.ylabel('Amp Amount')
+    # TS Plot of Lightning in Brisbane 2014.11.27
+    plt.title('TS of ' + amp_type + " of Lightning on " + str(date) + ' in ' + location)
+    
+    # Show the plot
+    plt.savefig("Lightning_TSPlot/AMP/" + date + "_" + location + "_" + str(width) + " " + amp_type)
+    plt.close()
