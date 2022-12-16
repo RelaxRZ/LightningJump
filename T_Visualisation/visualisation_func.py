@@ -96,7 +96,7 @@ def plot_func(lig_data, lig_type):
 def TS_Plot(start_min, end_min, lightning_type, date, location, width):
     
     # Read in the lightning TS csv with selected path
-    path = "Lightning_TS_CSV/" + date + "_" + location + "_" + str(width) + ".csv"
+    path = "Lightning_TSCSV/" + date + "_" + location + "_" + str(width) + ".csv"
     TS_data = pd.read_csv(path)
 
     # Collect the lightning TS data, including type IC, CG, and Total
@@ -121,14 +121,14 @@ def TS_Plot(start_min, end_min, lightning_type, date, location, width):
     plt.title(title)
     
     # Show the plot
-    plt.savefig("Lightning_TS_Plot/" + "TS_" + lightning_type + "/" + date + "_" + location + "_" + str(width) + "_" + lightning_type)
+    plt.savefig("Lightning_TSPlot/" + "TS_" + lightning_type + "/" + date + "_" + location + "_" + str(width) + "_" + lightning_type)
     plt.close()
 
 '''Function for plotting the IC, CG Lightning TS curves in one graph for comparison'''
 def ICCG_Comp_Plot(start_min, end_min, date, location, width):
     
     # Read in the lightning TS csv with selected path
-    path = "Lightning_TS_CSV/" + date + "_" + location + "_" + str(width) + ".csv"
+    path = "Lightning_TSCSV/" + date + "_" + location + "_" + str(width) + ".csv"
     TS_data = pd.read_csv(path)
 
     # Collect the lightning TS data, including type IC, CG, and Total
@@ -156,5 +156,5 @@ def ICCG_Comp_Plot(start_min, end_min, date, location, width):
     plt.title('TS of ' + "IC vs. CG" + " Lightning on " + str(date) + ' in ' + location)
     
     # Show the plot
-    plt.savefig("Lightning_TS_Plot/ICCG_VS/" + date + "_" + location + "_" + str(width))
+    plt.savefig("Lightning_TSPlot/ICCG_VS/" + date + "_" + location + "_" + str(width))
     plt.close()
