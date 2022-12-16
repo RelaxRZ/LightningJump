@@ -91,3 +91,70 @@ def plot_func(lig_data, lig_type):
             plt.plot(lig_data.iloc[i]["longitude"], lig_data.iloc[i]["latitude"], markersize=2, marker='o', color=col)
     
     return None
+
+'''Function for obtaining the TS plot of the selected type of lightning recorded in the specific region during a selected range of time'''
+def TS_Plot(start_min, end_min, lightning_type, date, location, width):
+    
+    # Read in the lightning TS csv with selected path
+    path = "Lightning_TS_CSV/" + date + "_" + location + "_" + str(width) + ".csv"
+    TS_data = pd.read_csv(path)
+
+    # Collect the lightning TS data, including type IC, CG, and Total
+    TS_type = TS_data[lightning_type]
+
+    # Collect the data points for plotting the line curve from the range of selected time
+    plot_TS_type = TS_type[start_min:end_min].tolist()
+
+    # Plot the curve and save it as time-series visulisation
+    # Set the X-axis Label
+    X_axis = [*range(start_min, end_min, 1)]
+
+    # Plot the Graph
+    plt.plot(X_axis, plot_TS_type)
+    # naming the x axis
+    X_tag = 'Minute Starts from: ' + str(start_min) + '~' + str(end_min)
+    plt.xlabel(X_tag)
+    # naming the y axis
+    plt.ylabel('Lightning Amount')
+    # TS Plot of Lightning in Brisbane 2014.11.27
+    title = lightning_type + " Lightning on " + str(date) + ' in ' + location
+    plt.title(title)
+    
+    # Show the plot
+    plt.savefig("Lightning_TS_Plot/" + "TS_" + lightning_type + "/" + date + "_" + location + "_" + str(width) + "_" + lightning_type)
+    plt.close()
+
+'''Function for plotting the IC, CG Lightning TS curves in one graph for comparison'''
+def ICCG_Comp_Plot(start_min, end_min, date, location, width):
+    
+    # Read in the lightning TS csv with selected path
+    path = "Lightning_TS_CSV/" + date + "_" + location + "_" + str(width) + ".csv"
+    TS_data = pd.read_csv(path)
+
+    # Collect the lightning TS data, including type IC, CG, and Total
+    TS_IC = TS_data["IC"]
+    TS_CG = TS_data["CG"]
+
+    # Collect the data points for plotting the line curve from the range of selected time
+    plot_TS_IC = TS_IC[start_min:end_min].tolist()
+    plot_TS_CG = TS_CG[start_min:end_min].tolist()
+
+    # Plot the curve and save it as time-series visulisation
+    # Set the X-axis Label
+    X_axis = [*range(start_min, end_min, 1)]
+
+    # Plot the Graph
+    plt.plot(X_axis, plot_TS_IC, label = "curve IC")
+    plt.plot(X_axis, plot_TS_CG, label = "curve CG")
+    plt.legend()
+
+    # naming the x axis
+    plt.xlabel('Minute Starts from: ' + str(start_min) + '~' + str(end_min))
+    # naming the y axis
+    plt.ylabel('Lightning Amount')
+    # TS Plot of Lightning in Brisbane 2014.11.27
+    plt.title('TS of ' + "IC vs. CG" + " Lightning on " + str(date) + ' in ' + location)
+    
+    # Show the plot
+    plt.savefig("Lightning_TS_Plot/ICCG_VS/" + date + "_" + location + "_" + str(width))
+    plt.close()
