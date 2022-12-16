@@ -6,6 +6,7 @@
 ### generic_visual.py -- Code for plotting the visulisation of lightning given the case area among the year
 ### PNGtoGIF.py -- Code for converting the folder of PNG(s) to a GIF for visualisation of the moving trend
 ### 1127_spec.py -- Code for investigating the Brisbane Lightning Case on 2014-11-27
+### TS_plot.py -- Code for plotting the TS visualisation based on the user's preference
 
 ## Preprocess_CSV Folder
 ### data_num.csv -- CSV contains number of lightning at each day during the investigated period
