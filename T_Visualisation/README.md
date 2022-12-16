@@ -10,10 +10,10 @@
 ## Preprocess_CSV Folder
 ### data_num.csv -- CSV contains number of lightning at each day during the investigated period
 
-## Lightning_TS_CSV Folder
+## Lightning_TSCSV Folder
 ### 20141127_Brisbane_6.csv -- CSV records the amount of lightning at each minute in Brisbane with range 6
 
-## Lightning_TS_Plot Folder
+## Lightning_TSPlot Folder
 ### ICCG_VS Folder -- Plots of number of IC vs CG in specific area during the selected time
 ### TS_CG Folder -- Plots of number of CG lightning in specific area during the selected time
 ### TS_IC Folder -- Plots of number of IC lightning in specific area during the selected time
