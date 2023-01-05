@@ -17,10 +17,10 @@
 ## Preprocess_CSV Folder
 ### data_num.csv -- CSV contains number of lightning at each day during the investigated period
 
-## Project Folder (***)(***)
+## Project Folder
 ### Folder for containing the source code of the core algorithm of the LJ Detection Project
 
-# ---------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------
 # Redundant_Code Folder
 ## Python File
 ### preproecss.py -- Code for collecting the lightning amount at each day during the selected date range
