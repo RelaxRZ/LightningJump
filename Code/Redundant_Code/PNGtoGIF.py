@@ -12,12 +12,12 @@ from PIL import Image
 import glob
 
 frames = []
-imgs = glob.glob("2014-11-27_Visualisation/*.png")
-imgs = sorted(imgs, key=lambda x: int(x.split('map_')[-1].split('.')[0]))
+imgs = glob.glob("cluster_test/cluster_7/*.png")
+imgs = sorted(imgs, key=lambda x: int(x.split('th')[0].split('cluster_test/cluster_7/')[-1]))
 
 for i in imgs:
     print(i)
     new_frame = Image.open(i)
     frames.append(new_frame)
 
-frames[0].save('test.gif', format = 'GIF', append_images = frames[1:], save_all = True, duration = 300, Loop = 0)
+frames[0].save('Movement_GIF/test.gif', format = 'GIF', append_images = frames[1:], save_all = True, duration = 300, Loop = 0)
