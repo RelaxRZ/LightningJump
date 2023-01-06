@@ -410,3 +410,41 @@ def LJ_Info(dir_path, case_study, cluster_amount):
         df_info["Sigma"] = sig_list
         df_info["Time"] = timestamp_list
         df_info.to_csv(file_name, index=False, header=True)
+
+'''Function for removing the redundant lightning jump within the defined time-gap'''
+def remove_RLJ(dir_path, case_study, cluster_amount, gap):
+
+    # Record LJ and Sigma information for all cluster in the case study
+    for i in range(cluster_amount):
+
+        # Define Variables
+        file_name = dir_path + "/" + case_study + str(i) + ".csv"
+        
+        # Read in the target cluster and load the lightning jump information
+        df_info = pd.read_csv(file_name)
+        LJ_list = df_info["LJ"].tolist()
+
+        # Remove redundant lightning jump
+        LJ_index = 0
+        
+        while LJ_index < len(LJ_list):
+            if LJ_list[LJ_index] != True:
+                LJ_index += 1
+            else:
+                loop_end = False
+                for k in range(gap):
+                    try:
+                        if LJ_list[LJ_index + 1 + k] != True:
+                            LJ_list[LJ_index + 1 + k] = "LJ_Continues"
+                            if (k == 2):
+                                LJ_index += 1
+                            else:
+                                continue
+                        else:
+                            LJ_index += (k + 1)
+                            break
+                    except:
+                        LJ_index = len(LJ_list)
+        
+        df_info["LJ"] = LJ_list
+        df_info.to_csv(file_name, index=False, header=True)
