@@ -1,5 +1,4 @@
 from visualisation_func import file_count, LJ_Info, remove_RLJ
-import pandas as pd
 
 # Define the path to the case study for generating the LJ and Sigma Information
 main_path = "Cluster_InfoCSV"
