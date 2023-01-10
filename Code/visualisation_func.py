@@ -3,11 +3,12 @@ import sys
 import math
 import numpy as np
 import pandas as pd
+from geopy import distance
 import cartopy.crs as ccrs
-from statistics import stdev
 from collections import Counter
 import matplotlib.pyplot as plt
 from shapely.geometry import Point
+from statistics import stdev, mean
 from shapely.geometry import MultiPoint
 from shapely.geometry.polygon import Polygon
 from datetime import datetime, timedelta, time
@@ -304,9 +305,9 @@ def LJ_Detection(prior_period, current_period, valid_jump):
     if (current_period[1] >= valid_jump and current_period[0] >= 20):
         try:
             if (current_period[1] - current_period[0]) / stdev(DFRDT) >= 2:
-                return True, (current_period[1] - current_period[0]) / stdev(DFRDT)
+                return True, round((current_period[1] - current_period[0]) / stdev(DFRDT), 5)
             else:
-                return False, (current_period[1] - current_period[0]) / stdev(DFRDT)
+                return False, round((current_period[1] - current_period[0]) / stdev(DFRDT), 5)
         except:
             return False, 0
     else:
@@ -338,26 +339,42 @@ def target_cluster_plot(target, target_list, minute, time, ICCG, ax):
         df = ICCG.loc[ICCG["Cluster_Label"] == target_list[minute]]
         cluster_plot(df, target, minute, ax)
 
+'''Function for calculating the distance in KM from the cluster centroid to other point(s)'''
+def point_dist(centroid, candidate):
+    # Compute the distance between the centroid and the point within that cluster
+    point_centroid = [centroid.y, centroid.x]
+    point_candidate = [candidate[1], candidate[0]]
+    return (distance.distance(point_centroid, point_candidate).km)
+
 '''Function for recording the centroid (track) of the target cluster'''
 def centroid_record(target_list, current_moment, ICCG, status):
     # If there is no lightning in the current time-interval, return NaN
     if status == False:
-        return "NaN", 0, 0, 0, 0
+        return "NaN", 0, 0, 0, 0, 0, 0
     # If there is lightning in the current time-interval, return value based on different circumstance
     else:
         # If there is no valid cluster close to the previous investigated centroid, return NaN
         if target_list[current_moment] == "NaN":
-            return "NaN", 0, 0, 0, 0
+            return "NaN", 0, 0, 0, 0, 0, 0
         # If there is a valid cluster, return the cluster centroid value as [x, y]
         else:
             df = ICCG.loc[ICCG["Cluster_Label"] == target_list[current_moment]]
             IC_num = (df.loc[df["stroke_type"] == "IC"]).shape[0]
             CG_num = (df.loc[df["stroke_type"] == "CG"]).shape[0]
-            IC_amp = sum(abs((df.loc[df["stroke_type"] == "IC"])["amp"]))
-            CG_amp = sum(abs((df.loc[df["stroke_type"] == "CG"])["amp"]))
+            IC_amp = round(sum(abs((df.loc[df["stroke_type"] == "IC"])["amp"])), 3)
+            CG_amp = round(sum(abs((df.loc[df["stroke_type"] == "CG"])["amp"])), 3)
             points = MultiPoint(df["coordinate"].tolist())
             centroid = points.centroid
-            return [centroid.x, centroid.y], IC_num, CG_num, IC_amp, CG_amp
+            
+            # Record the scale of the investigated cluster at the specific time-interval
+            scale_list = []
+            for poi in df["coordinate"].tolist():
+                scale_list.append(point_dist(centroid, poi))
+            
+            # Compute the density of lightning in the specific cluster
+            scale_rad = mean(scale_list)
+            dense = round((IC_num + CG_num) / (scale_rad ** 2 * math.pi), 3)
+            return [centroid.x, centroid.y], round(mean(scale_list), 3), dense, IC_num, CG_num, IC_amp, CG_amp
 
 '''Function for counting the number of files in the target directory'''
 def file_count(dir_path):
@@ -413,7 +430,6 @@ def LJ_Info(dir_path, case_study, cluster_amount):
 
 '''Function for removing the redundant lightning jump within the defined time-gap'''
 def remove_RLJ(dir_path, case_study, cluster_amount, gap):
-
     # Record LJ and Sigma information for all cluster in the case study
     for i in range(cluster_amount):
 
@@ -446,5 +462,37 @@ def remove_RLJ(dir_path, case_study, cluster_amount, gap):
                     except:
                         LJ_index = len(LJ_list)
         
+        # Stored the updated LJ information to CSV
+        df_info["LJ"] = LJ_list
+        df_info.to_csv(file_name, index=False, header=True)
+
+'''Function for allocating ID to each Seperated Lightning Jump within the Investigated Cluster'''
+def LJ_ID(dir_path, case_study, cluster_amount, gap):
+    # Record LJ and Sigma information for all cluster in the case study
+    for i in range(cluster_amount):
+
+        # Define Variables
+        file_name = dir_path + "/" + case_study + str(i) + ".csv"
+        
+        # Read in the target cluster and load the lightning jump information
+        df_info = pd.read_csv(file_name)
+        LJ_list = df_info["LJ"].tolist()
+
+        # Assign ID to each lightning jump (treat the lightning jumps as one if there are less than three LJ_continues in between)
+        jump_ID = 0
+        continue_count = 0
+        for k in range(len(LJ_list)):
+            if LJ_list[k] == "True":
+                LJ_list[k] = "Jump_" + str(jump_ID)
+                continue_count = 0
+
+            elif LJ_list[k] == "LJ_Continues":
+                continue_count += 1
+                LJ_list[k] = "Jump_" + str(jump_ID)
+                if continue_count == gap:
+                    jump_ID += 1
+                    continue_count = 0
+        
+        # Stored the updated LJ information to CSV
         df_info["LJ"] = LJ_list
         df_info.to_csv(file_name, index=False, header=True)

@@ -1,4 +1,4 @@
-from visualisation_func import file_count, LJ_Info, remove_RLJ
+from visualisation_func import file_count, LJ_Info, remove_RLJ, LJ_ID
 
 # Define the path to the case study for generating the LJ and Sigma Information
 main_path = "Cluster_InfoCSV"
@@ -11,6 +11,9 @@ LJ_Info(dir_path, case_study, cluster_amount)
 # Remove the redundant lightning jump which happen within a 6 mins range
 # https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5749929/
 time_interval = 2
-LJ_range = 6
-gap = int(LJ_range / time_interval)
+mins_range = 6
+gap = int(mins_range / time_interval)
 remove_RLJ(dir_path, case_study, cluster_amount, gap)
+
+# Assign ID for each seperated lightning jump within each cluster of the selected case study
+LJ_ID(dir_path, case_study, cluster_amount, gap)

@@ -22,12 +22,11 @@ time_interval = int(hrs * mins / gap)
 track_num = 0
 file_begin = True
 initial = True
-start_date = "2014-01-01"
 date_format = "%Y-%m-%d"
 case_area = "Brisbane"
 case_date = "2014-11-27"
 case_study = case_area + "_" + case_date
-year = start_date[0:4]
+year = "2014"
 
 # Construct the specific polygon
 min_lon, max_lon, min_lat, max_lat, area_polygon = polygon_func(152.6333333, -29.35, 8)
@@ -184,7 +183,7 @@ current_end_time = datetime_default + timedelta(minutes = gap)
 target_cluster_track = list(track_TS)
 centroid_record_list = []
 for i in range(len(target_cluster_track)):
-    centroid_record_list.append({"Coordinate" : [], "IC_num" : [], "CG_num" : [], "IC_amp" : [], "CG_amp" : []})
+    centroid_record_list.append({"Coordinate" : [], "Scale_KM": [], "TOT_dense" : [], "IC_num" : [], "CG_num" : [], "IC_amp" : [], "CG_amp" : []})
 
 for j in range(time_interval):
     # Extract Coordinates' Information from the Total Lightning Dataframe
@@ -205,8 +204,10 @@ for j in range(time_interval):
             ax.set_extent([min_lon, max_lon, min_lat, max_lat], ccrs.PlateCarree())
             target_cluster_plot(k, track_cluster[k], j, current_start_time, ICCG, ax)
             '''
-            centroid, IC_num, CG_num, IC_amp, CG_amp = centroid_record(track_cluster[k], j, ICCG, True)
+            centroid, scale, TOTD, IC_num, CG_num, IC_amp, CG_amp = centroid_record(track_cluster[k], j, ICCG, True)
             centroid_record_list[k]["Coordinate"].append(centroid)
+            centroid_record_list[k]["Scale_KM"].append(scale)
+            centroid_record_list[k]["TOT_dense"].append(TOTD)
             centroid_record_list[k]["IC_num"].append(IC_num)
             centroid_record_list[k]["CG_num"].append(CG_num)
             centroid_record_list[k]["IC_amp"].append(IC_amp)
@@ -220,8 +221,10 @@ for j in range(time_interval):
             # ax.set_extent([min_lon, max_lon, min_lat, max_lat], ccrs.PlateCarree())
             # blank_plot(k, j, current_start_time, ax)
             '''
-            centroid, IC_num, CG_num, IC_amp, CG_amp = centroid_record(track_cluster[k], j, ICCG, False)
+            centroid, scale, TOTD, IC_num, CG_num, IC_amp, CG_amp = centroid_record(track_cluster[k], j, ICCG, False)
             centroid_record_list[k]["Coordinate"].append(centroid)
+            centroid_record_list[k]["Scale_KM"].append(scale)
+            centroid_record_list[k]["TOT_dense"].append(TOTD)
             centroid_record_list[k]["IC_num"].append(IC_num)
             centroid_record_list[k]["CG_num"].append(CG_num)
             centroid_record_list[k]["IC_amp"].append(IC_amp)
