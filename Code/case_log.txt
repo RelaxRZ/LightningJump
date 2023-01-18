@@ -1,0 +1,5 @@
+Brisbane 2014-11-27, Coordinate(Lon = -29.35, Lat = 152.63)
+Ouyen 2022-11-19, Coordinate(Lon = -35.07, Lat = 142.31)
+Eyre Peninsula 2022-01-26, Coordinate(Lon = -34.33, Lat = 135.75)
+Mitcham 2022-09-18, Coordinate(Lon = -37.8, Lat = 145.19)
+Narwietooma 2022-03-24, Coordinate(Lon = -23.23, Lat = 132.62)

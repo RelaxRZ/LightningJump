@@ -1,52 +1,38 @@
+import os
 import math
 import numpy as np
 import pandas as pd
 import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
-from collections import Counter
 from sklearn.cluster import DBSCAN
-from shapely.geometry import Point
-from shapely.geometry import MultiPoint
-from shapely.geometry.polygon import Polygon
 from datetime import datetime, timedelta
-from visualisation_func import spec_year, ICCG_Collect, plot_func, polygon_func, initial_centroid, next_moment_cluster, blank_plot, target_cluster_plot, centroid_record
+from LJ_FUNCTION import spec_year, start_end_row, ICCG_Collect, plot_func, polygon_func, initial_centroid, next_moment_cluster, blank_plot, target_cluster_plot, centroid_record, centroid_record_func
 
 ###############################################Define Variables############################################
-date_range = 365
-start_row = 1
-end_row = 1
+gap = 2
 hrs = 24
 mins = 60
-gap = 2
 time_interval = int(hrs * mins / gap)
-track_num = 0
-file_begin = True
-initial = True
-date_format = "%Y-%m-%d"
+case_lon = -29.35
+case_lat = 152.6333
+case_range = 6
+DBSCAN_scale = 20
+DBSCAN_dist = 0.25
 case_area = "Brisbane"
 case_date = "2014-11-27"
+date_format = "%Y-%m-%d"
 case_study = case_area + "_" + case_date
-year = "2014"
 
 # Construct the specific polygon
-min_lon, max_lon, min_lat, max_lat, area_polygon = polygon_func(152.6333333, -29.35, 8)
+min_lon, max_lon, min_lat, max_lat, area_polygon = polygon_func(case_lat, case_lon, case_range)
 
 ################################################Read In Data###############################################
-#directory with the data
-dirin='/g/data/er8/lightning/data/wz_ltng/'
-
 # Obtain the csv file name and only read the 'date' data for preprocessing
-filename='wz_ltng_'+year+'.csv'
+filename='/g/data/er8/lightning/data/wz_ltng/wz_ltng_' + case_date[0:4] + '.csv'
 
-# Read in the preprocessed CSV of lightning count of each day
-light_date = pd.read_csv("Preprocess_CSV/date_num.csv")
-for i in range(light_date.shape[0]):
-    if light_date.iloc[i]["Date"] == case_date:
-        break
-    else:
-        end_row += light_date.iloc[i]["Lightning_Count"]
-
-df_date = pd.read_csv(dirin+filename, sep=',', skiprows = range(start_row, end_row), nrows = light_date.iloc[i]["Lightning_Count"])
+# Compute the start and end rows of the case study from the csv and extract the data
+start_row, end_row, light_date, i_date = start_end_row(case_date)
+df_date = pd.read_csv(filename, sep=',', skiprows = range(start_row, end_row), nrows = light_date.iloc[i_date]["Lightning_Count"])
 
 ############################################Start Cluster Tracking#########################################
 # Create the coordinate, timestamp information for each instance
@@ -63,6 +49,8 @@ datetime_default = datetime.strptime(df_date.iloc[0]["date"], date_format)
 current_start_time = datetime_default
 current_end_time = datetime_default + timedelta(minutes = gap)
 
+track_num = 0       # Tracking ID (initial) of the Cluster in the Cast Study
+initial = True      # Set the condition for checking whether the recorded moment as starting or not
 track_TS = {}       # Lightning Amount of each Cluster
 track_cluster = {}  # Cluster's path with Cluster Label (closest to the tracked cluster) of all lightning at each time
 track_centroid = [] # Centroid list for adding in new tracked cluster center
@@ -75,7 +63,7 @@ for j in range(time_interval):
 
     # Try to apply the DBSCAN for clustering purpose with pre-determined hyper-parameters
     try:
-        clustering = DBSCAN(eps = 0.24, min_samples = 10).fit(coordinate_list)
+        clustering = DBSCAN(eps = DBSCAN_dist, min_samples = DBSCAN_scale).fit(coordinate_list)
         ICCG["Cluster_Label"] = clustering.labels_
     
         # Generate the list for storing the clustering type (label) without the outlier(s)
@@ -159,22 +147,17 @@ for j in range(time_interval):
             track_TS[i].append(0)
             track_cluster[i].append("NaN")
 
+# Fill 0 to the first cluster lightning amount list if the first strike
+if len(track_TS[0]) < time_interval:
+    track_TS[0] = [0] * (time_interval - len(track_TS[0])) + track_TS[0]
+
 # Store the lightning amount at each time-interval within the selected tracked cluster to csv
 df_cluster = pd.DataFrame.from_dict(track_TS)
 df_cluster.to_csv('Cluster_TSCSV/' + case_study + '.csv', index=False, header=True)
 
-###########################################Start Cluster Plotting##########################################
-##########################################Start Centroid Recording#########################################
-# Create the coordinate, timestamp information for each instance
-df_date["coordinate"] = df_date[["longitude", "latitude"]].apply(list, axis = 1)
-df_date["datetime"] = df_date['date'] + " " + df_date["time"]
-df_date["datetime"] = pd.to_datetime(df_date["datetime"])
-
-# Collect the lightning within each minutes in the target area
-## First set the default datetime with the given dataframe (e.g. 2014-01-01 00:00:00)
-datetime_default = datetime.strptime(df_date.iloc[0]["date"], date_format)
-
-## Then set time gap to split the dataframe (e.g. 2 minutes)
+# ###########################################Start Cluster Plotting##########################################
+# ##########################################Start Centroid Recording#########################################
+## Set time gap to split the dataframe (e.g. 2 minutes)
 ## In this code, we investigate on the selected date data within each minute (24 * 60 / 2 groups of data)
 current_start_time = datetime_default
 current_end_time = datetime_default + timedelta(minutes = gap)
@@ -194,7 +177,7 @@ for j in range(time_interval):
 
     # Try to apply the DBSCAN for clustering purpose with pre-determined hyper-parameter(s)
     try:
-        clustering = DBSCAN(eps = 0.24, min_samples = 10).fit(coordinate_list)
+        clustering = DBSCAN(eps = DBSCAN_dist, min_samples = DBSCAN_scale).fit(coordinate_list)
         ICCG["Cluster_Label"] = clustering.labels_
         for k in target_cluster_track:
             ''' 
@@ -204,14 +187,7 @@ for j in range(time_interval):
             ax.set_extent([min_lon, max_lon, min_lat, max_lat], ccrs.PlateCarree())
             target_cluster_plot(k, track_cluster[k], j, current_start_time, ICCG, ax)
             '''
-            centroid, scale, TOTD, IC_num, CG_num, IC_amp, CG_amp = centroid_record(track_cluster[k], j, ICCG, True)
-            centroid_record_list[k]["Coordinate"].append(centroid)
-            centroid_record_list[k]["Scale_KM"].append(scale)
-            centroid_record_list[k]["TOT_dense"].append(TOTD)
-            centroid_record_list[k]["IC_num"].append(IC_num)
-            centroid_record_list[k]["CG_num"].append(CG_num)
-            centroid_record_list[k]["IC_amp"].append(IC_amp)
-            centroid_record_list[k]["CG_amp"].append(CG_amp)
+            centroid_record_list = centroid_record_func(centroid_record_list, track_cluster, k, j, ICCG, True)
     except:
         for k in target_cluster_track:
             ''' 
@@ -221,17 +197,13 @@ for j in range(time_interval):
             # ax.set_extent([min_lon, max_lon, min_lat, max_lat], ccrs.PlateCarree())
             # blank_plot(k, j, current_start_time, ax)
             '''
-            centroid, scale, TOTD, IC_num, CG_num, IC_amp, CG_amp = centroid_record(track_cluster[k], j, ICCG, False)
-            centroid_record_list[k]["Coordinate"].append(centroid)
-            centroid_record_list[k]["Scale_KM"].append(scale)
-            centroid_record_list[k]["TOT_dense"].append(TOTD)
-            centroid_record_list[k]["IC_num"].append(IC_num)
-            centroid_record_list[k]["CG_num"].append(CG_num)
-            centroid_record_list[k]["IC_amp"].append(IC_amp)
-            centroid_record_list[k]["CG_amp"].append(CG_amp)
+            centroid_record_list = centroid_record_func(centroid_record_list, track_cluster, k, j, ICCG, False)
 
 # Store the target cluster(s)' information to csv for further usage
-for i in range(len(centroid_record_list)):
+dir_path = os.path.join('Cluster_InfoCSV/', case_study)
+if not os.path.isdir(dir_path):
+    os.mkdir(dir_path)
+for i in range(len(centroid_record_list)):    
     df_centroid = pd.DataFrame.from_dict(centroid_record_list[i])
     file_path = 'Cluster_InfoCSV/' + case_study + "/" + case_study + "_Cluster" + str(i) + '.csv'
     df_centroid.to_csv(file_path, index=False, header=True)

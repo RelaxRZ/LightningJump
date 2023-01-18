@@ -1,5 +1,4 @@
-from visualisation_func import TS_Plot, ICCG_Comp_Plot, AMP_Plot, cluster_track
-
+from LJ_FUNCTION import TS_Plot, ICCG_Comp_Plot, AMP_Plot, file_count, ClusterTS_Plot
 # Plotting Example (IC, CG, Total, IC vs. CG)
 # Feel free to change the first three variables in the following command to obtain a different plot
 # TS_Plot(0, 720, "IC", "20141127", "Brisbane", 8)
@@ -9,4 +8,4 @@ from visualisation_func import TS_Plot, ICCG_Comp_Plot, AMP_Plot, cluster_track
 # AMP_Plot(0, 720, "20141127", "Brisbane", 8, "IC_abs_amp")
 # AMP_Plot(0, 720, "20141127", "Brisbane", 8, "CG_abs_amp")
 # AMP_Plot(0, 720, "20141127", "Brisbane", 8, "Total_abs_amp")
-# cluster_track("Brisbane_2014-11-27", 0, 720, 20)
+ClusterTS_Plot("Cluster_InfoCSV/", "Mitcham_2022-09-18", 2)

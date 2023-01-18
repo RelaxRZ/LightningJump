@@ -1,4 +1,4 @@
-from visualisation_func import file_count, LJ_Info, remove_RLJ, LJ_ID
+from LJ_FUNCTION import file_count, LJ_Info, remove_RLJ, LJ_ID
 
 # Define the path to the case study for generating the LJ and Sigma Information
 main_path = "Cluster_InfoCSV"
