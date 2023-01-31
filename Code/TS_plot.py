@@ -8,4 +8,4 @@ from LJ_FUNCTION import TS_Plot, ICCG_Comp_Plot, AMP_Plot, file_count, ClusterTS
 # AMP_Plot(0, 720, "20141127", "Brisbane", 8, "IC_abs_amp")
 # AMP_Plot(0, 720, "20141127", "Brisbane", 8, "CG_abs_amp")
 # AMP_Plot(0, 720, "20141127", "Brisbane", 8, "Total_abs_amp")
-ClusterTS_Plot("Cluster_InfoCSV/", "Mitcham_2022-09-18", 2)
+ClusterTS_Plot("Cluster_InfoCSV/", "Bourke_2021-09-29", 2)

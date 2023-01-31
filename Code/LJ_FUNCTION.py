@@ -36,7 +36,7 @@ def spec_year(year_start, year_len, datetime_format, df):
 def start_end_row(case_date):
     start_row = 1
     end_row = 1
-    light_date = pd.read_csv('Preprocess_CSV/date_num_' + case_date[0:4] + '.csv')
+    light_date = pd.read_csv('/g/data/er8/lightning/chizhang/Preprocess_CSV/date_num_' + case_date[0:4] + '.csv')
     for i in range(light_date.shape[0]):
         if light_date.iloc[i]["Date"] == case_date:
             break
@@ -387,7 +387,7 @@ def file_count(dir_path):
     return count
 
 '''Function for recording the LJ and Sigma Information for all cluster in the case study'''
-def LJ_Info(dir_path, case_study, cluster_amount):
+def LJ_Info(dir_path, case_study, cluster_amount, LJ_threshold):
     # Record LJ and Sigma information for all cluster in the case study
     for i in range(cluster_amount):
 
@@ -414,7 +414,7 @@ def LJ_Info(dir_path, case_study, cluster_amount):
         while end_window + 1 < len(cluster_list):
             feature = cluster_list[start_window:end_window]
             test = cluster_list[end_window-1:end_window+1]
-            LJ, sig = LJ_Detection(feature, test, 20)
+            LJ, sig = LJ_Detection(feature, test, LJ_threshold)
             LJ_list.append(LJ)
             sig_list.append(sig)
             start_window += 1
@@ -452,7 +452,7 @@ def remove_RLJ(dir_path, case_study, cluster_amount, gap):
                     try:
                         if LJ_list[LJ_index + 1 + k] != True:
                             LJ_list[LJ_index + 1 + k] = "LJ_Continues"
-                            if (k == 2):
+                            if (k == (gap - 1)):
                                 LJ_index += 1
                             else:
                                 continue
@@ -559,10 +559,9 @@ def radar_ID(dir_path, case_study, cluster_amount, cluster_box_range, radar_dict
         case_df.to_csv(case_path, index = False, header = True)
 
 '''Function for collecting the SHI information and store them into the CSV file of lightning cluster'''
-def shi_Collect(cluster_amount, dir_path, case_study, cluster_box_range, level2_root, var_name, date, shi_time, last_moment):
+def shi_Collect(cluster_amount, dir_path, case_study, cluster_box_range, level2_root, var_name, date, shi_time, last_moment, threshold):
     # Loop through all the cluster from the selected case study
     for i in range(cluster_amount):
-
         # Load in the CSV of lightning jump in each cluster
         case_path = dir_path + "/" + case_study + str(i) + ".csv"
         case_df = pd.read_csv(case_path)
@@ -575,18 +574,19 @@ def shi_Collect(cluster_amount, dir_path, case_study, cluster_box_range, level2_
         shi_list = []
         shi_90_list = []
         shi_time_list = []
+        shi_coor_list = []
         shi_valid_size_list = []
         shi_invalid_size_list = []
         shi_valid_range_list = []
         previous_radar_ID = "Initial"
-
         # Record the SHI information based on lightning jump(s) in each cluster and the related radar station
         for j in range(len(radar_list)):
             # Record the SHI information as NaN if there no lightning jump
-            if radar_list[j] == "No_Radar" or radar_list[j] == "Same_Jump" or type(radar_list[j]) == float:
+            if radar_list[j] == "No_Radar" or radar_list[j] == "Same_Jump" or type(radar_list[j]) == float or radar_list[j] == "NaN":
                 shi_list.append("NaN")
                 shi_90_list.append("NaN")
                 shi_time_list.append("NaN")
+                shi_coor_list.append("NaN")
                 shi_valid_size_list.append("NaN")
                 shi_invalid_size_list.append("NaN")
                 shi_valid_range_list.append("NaN")
@@ -598,8 +598,8 @@ def shi_Collect(cluster_amount, dir_path, case_study, cluster_box_range, level2_
                         # Create the lat-lon mask based the current lightning jump centroid
                         LJ_centroid = json.loads(coor_list[j])
                         min_lon, max_lon, min_lat, max_lat, area_polygon = polygon_func(LJ_centroid[0], LJ_centroid[1], cluster_box_range)
-                        lat_grid = shi_file.variables['latitude'][:]
-                        lon_grid = shi_file.variables['longitude'][:]
+                        lat_grid = shi_file.variables['latitude'][:, :]
+                        lon_grid = shi_file.variables['longitude'][:, :]
                         lat_mask = (lat_grid > min_lat) & (lat_grid < max_lat)
                         lon_mask = (lon_grid > min_lon) & (lon_grid < max_lon)
                         latlon_mask = lat_mask & lon_mask
@@ -645,18 +645,31 @@ def shi_Collect(cluster_amount, dir_path, case_study, cluster_box_range, level2_
                         # Extract the valid data from the preprocessed SHI data from time-range mask with the lat-lon mask
                         current_max_shi_list = []
                         nonneg_90_shi_list = []
+                        coor_shi_list = []
+                        lat_value = lat_grid[latlon_mask]
+                        lon_value = lon_grid[latlon_mask]
+                        
                         for k in shi_valid_time:
-                            current_max_shi_list.append(round(max(k.data[latlon_mask]), 4))
-                            non_negative_list = [x for x in k.data[latlon_mask].tolist() if x >= 0]
-                            nonneg_90_shi_list.append(round(np.percentile(non_negative_list, 90), 4))
+                            above_threshold_list = [x for x in k.data[latlon_mask].tolist() if x >= threshold]
+                            if (len(above_threshold_list) == 0):
+                                coor_shi_list.append("NaN")
+                                current_max_shi_list.append("NaN")
+                                nonneg_90_shi_list.append("NaN")
+                            else:
+                                max_index = np.argmax(k.data[latlon_mask].tolist())
+                                coor_shi_list.append([lat_value[max_index], lon_value[max_index]])
+                                current_max_shi_list.append(round(max(k.data[latlon_mask]), 4))
+                                nonneg_90_shi_list.append(round(np.percentile(above_threshold_list, 90), 4))
                         shi_list.append(current_max_shi_list)
                         shi_90_list.append(nonneg_90_shi_list)
+                        shi_coor_list.append(coor_shi_list)
 
                 # If there is a lightning jump but no valid radar file, record 'No_File' into the SHI information list
                 except:
                     shi_list.append("No_File")
                     shi_90_list.append("No_File")
                     shi_time_list.append("No_File")
+                    shi_coor_list.append("No_File")
                     shi_valid_size_list.append("No_File")
                     shi_invalid_size_list.append("No_File")
                     shi_valid_range_list.append("No_File")
@@ -665,7 +678,23 @@ def shi_Collect(cluster_amount, dir_path, case_study, cluster_box_range, level2_
         case_df["max_SHI"] = shi_list
         case_df["nonneg_90_SHI"] = shi_90_list
         case_df["time_SHI"] = shi_time_list
+        case_df["coor_SHI"] = shi_coor_list
         case_df["valid_size_SHI"] = shi_valid_size_list
         case_df["invalid_size_SHI"] = shi_invalid_size_list
         case_df["valid_range_SHI"] = shi_valid_range_list
         case_df.to_csv(case_path, index = False, header = True)
+
+'''Function for writing basic information to the job script'''
+def script_basic(job_file):
+    job_file.write("#!/bin/bash\n")
+    job_file.write("#PBS -l walltime=01:00:00\n")
+    job_file.write("#PBS -l mem=20GB\n")
+    job_file.write("#PBS -l ncpus=1\n")
+    job_file.write("#PBS -l jobfs=20GB\n")
+    job_file.write("#PBS -l storage=gdata/k10+gdata/hh5+scratch/k10+gdata/er8+scratch/er8+gdata/ra22+gdata/rq0\n\n")
+    job_file.write("#PBS -l other=hyperthread\n")
+    job_file.write("#PBS -q normal\n")
+    job_file.write("#PBS -P er8\n\n")
+    job_file.write("module use /g/data3/hh5/public/modules\n")
+    job_file.write("module load conda/analysis3\n")
+    job_file.write("conda\n\n")

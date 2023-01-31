@@ -1,0 +1,2 @@
+Varaible Case 1: Lightning Flash Min = 20, Lightning Dsitance = 0.25, Case_Range = 6
+Varaible Case 2: Lightning Flash Min = 20, Lightning Dsitance = 0.25, Case_Range = 5

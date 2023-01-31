@@ -12,13 +12,13 @@ hrs = 24
 mins = 60
 date_range = 365
 time_interval = int(hrs * mins / gap)
-case_lon = -35.726
-case_lat = 142.3188
-case_range = 8
+case_lat = -20.758
+case_lon = 148.607
+case_range = 5
 DBSCAN_scale = 10
 DBSCAN_dist = 0.24
-case_area = "Mitcham"
-case_date = "2022-09-18"
+case_area = "Mackay"
+case_date = "2021-10-17"
 date_format = "%Y-%m-%d"
 case_study = case_area + "_" + case_date
 
@@ -27,15 +27,17 @@ if not os.path.isdir(os.path.join("ICCG_Plot/", case_study)):
     os.makedirs(os.path.join("ICCG_Plot/", case_study))
 
 # Construct the specific polygon
-min_lon, max_lon, min_lat, max_lat, area_polygon = polygon_func(case_lat, case_lon, case_range)
+min_lon, max_lon, min_lat, max_lat, area_polygon = polygon_func(case_lon, case_lat, case_range)
 
 ################################################Read In Data###############################################
 # Obtain the csv file name and only read the 'date' data for preprocessing
-filename='/g/data/er8/lightning/data/wz_ltng/wz_ltng_' + case_date[0:4] + '.csv'
+# filename='/g/data/er8/lightning/data/wz_ltng/wz_ltng_' + case_date[0:4] + '.csv'
 
-# Compute the start and end rows of the case study from the csv and extract the data
-start_row, end_row, light_date, i_date = start_end_row(case_date)
-df_date = pd.read_csv(filename, sep=',', skiprows = range(start_row, end_row), nrows = light_date.iloc[i_date]["Lightning_Count"])
+# # Compute the start and end rows of the case study from the csv and extract the data
+# start_row, end_row, light_date, i_date = start_end_row(case_date)
+# df_date = pd.read_csv(filename, sep=',', skiprows = range(start_row, end_row), nrows = light_date.iloc[i_date]["Lightning_Count"])
+df_date = pd.read_csv("/g/data/er8/lightning/chizhang/Preprocess_CSV/" + case_date[0:4] + "/" + "data_num_" + case_date + ".csv", sep=',')
+
 
 # Create the coordinate, timestamp information for each instance
 df_date["coordinate"] = df_date[["longitude", "latitude"]].apply(list, axis = 1)

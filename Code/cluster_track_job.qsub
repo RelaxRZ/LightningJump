@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -l walltime=01:00:00
+#PBS -l mem=20GB
+#PBS -l ncpus=1
+#PBS -l jobfs=20GB
+#PBS -l storage=gdata/k10+gdata/hh5+scratch/k10+gdata/er8+scratch/er8+gdata/ra22+gdata/rq0
+
+#PBS -l other=hyperthread
+#PBS -q normal
+#PBS -P er8
+
+module use /g/data3/hh5/public/modules
+module load conda/analysis3
+conda
+
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Brisbane.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Bourke.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Mackay.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Marlborough.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Ellesmere.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Amamoor.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Armidale.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Yalboroo.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Reids_Flat.qsub
+qsub /g/data/er8/lightning/chizhang/Job_Script/cluster_track_job_Beenaam_Valley.qsub

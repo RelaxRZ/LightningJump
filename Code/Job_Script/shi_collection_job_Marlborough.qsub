@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -l walltime=01:00:00
+#PBS -l mem=20GB
+#PBS -l ncpus=1
+#PBS -l jobfs=20GB
+#PBS -l storage=gdata/k10+gdata/hh5+scratch/k10+gdata/er8+scratch/er8+gdata/ra22+gdata/rq0
+
+#PBS -l other=hyperthread
+#PBS -q normal
+#PBS -P er8
+
+module use /g/data3/hh5/public/modules
+module load conda/analysis3
+conda
+
+mpirun python3 /g/data/er8/lightning/chizhang/shi_collection.py -l "Marlborough_,2021-11-22,20211122,0.5,50,2.8,1" >& /g/data/er8/lightning/chizhang/output.log

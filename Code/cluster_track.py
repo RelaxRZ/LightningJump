@@ -1,38 +1,78 @@
 import os
 import math
+import argparse
 import numpy as np
 import pandas as pd
+from mpi4py import MPI
 import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
 from sklearn.cluster import DBSCAN
 from datetime import datetime, timedelta
 from LJ_FUNCTION import spec_year, start_end_row, ICCG_Collect, plot_func, polygon_func, initial_centroid, next_moment_cluster, blank_plot, target_cluster_plot, centroid_record, centroid_record_func
 
+##########################################Read in Tuneable Variables######################################
+# Accept input from the job submission
+parser = argparse.ArgumentParser()
+parser.add_argument('-l', '--list', help='delimited list input', type=str)
+args = parser.parse_args()
+
+# Assign value to the tuneable variables
+variable_list = [(item) for item in args.list.split(',')]
+case_area = variable_list[0]
+case_lat = float(variable_list[1])
+case_lon = float(variable_list[2])
+case_month = variable_list[3]
+case_range = float(variable_list[4])
+DBSCAN_scale = int(variable_list[5])
+DBSCAN_dist = float(variable_list[6])
+gap = int(variable_list[7])
+variable_case = variable_list[8]
+
+# Directory Path of lightning cluster
+main_dir = "/g/data/er8/lightning/chizhang/Cluster_InfoCSV/"
+case_path = "Variable_Case_" + variable_case
+case_dir_path = os.path.join(main_dir, case_path)
+os.makedirs(case_dir_path, exist_ok = True)
+main_dir += case_path
+
+# Directory Path of lightning cluster time-series
+main_dir_ts = '/g/data/er8/lightning/chizhang/Cluster_TSCSV/'
+case_dir_path_ts = os.path.join(main_dir_ts, case_path)
+os.makedirs(case_dir_path_ts, exist_ok = True)
+main_dir_ts += case_path
+
 ###############################################Define Variables############################################
-gap = 2
+# Start Parallel Processing
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()
+size = comm.Get_size()
+
+# Create the date-stamp of the case study
+num_date = (np.array_split(range(size), size)[rank])
+if (len(str(num_date[0] + 1)) == 1):
+    num_date = "0" + str(num_date[0] + 1)
+else:
+    num_date = str(num_date[0] + 1)
+
+# Define the 'Yearly' case study date with parallel processing
+case_date = case_month + num_date
+
+# Define the 'Daily' case study date with multiple job submission
+# case_date = case_month
+
+# Compute the case study label for further investigation
 hrs = 24
 mins = 60
 time_interval = int(hrs * mins / gap)
-case_lon = -29.35
-case_lat = 152.6333
-case_range = 6
-DBSCAN_scale = 20
-DBSCAN_dist = 0.25
-case_area = "Brisbane"
-case_date = "2014-11-27"
 date_format = "%Y-%m-%d"
 case_study = case_area + "_" + case_date
 
-# Construct the specific polygon
-min_lon, max_lon, min_lat, max_lat, area_polygon = polygon_func(case_lat, case_lon, case_range)
-
 ################################################Read In Data###############################################
-# Obtain the csv file name and only read the 'date' data for preprocessing
-filename='/g/data/er8/lightning/data/wz_ltng/wz_ltng_' + case_date[0:4] + '.csv'
+# Construct the specific polygon
+min_lon, max_lon, min_lat, max_lat, area_polygon = polygon_func(case_lon, case_lat, case_range)
 
-# Compute the start and end rows of the case study from the csv and extract the data
-start_row, end_row, light_date, i_date = start_end_row(case_date)
-df_date = pd.read_csv(filename, sep=',', skiprows = range(start_row, end_row), nrows = light_date.iloc[i_date]["Lightning_Count"])
+# Read in lightning data
+df_date = pd.read_csv("/g/data/er8/lightning/chizhang/Preprocess_CSV/" + case_date[0:4] + "/" + "data_num_" + case_date + ".csv", sep=',')
 
 ############################################Start Cluster Tracking#########################################
 # Create the coordinate, timestamp information for each instance
@@ -54,6 +94,7 @@ initial = True      # Set the condition for checking whether the recorded moment
 track_TS = {}       # Lightning Amount of each Cluster
 track_cluster = {}  # Cluster's path with Cluster Label (closest to the tracked cluster) of all lightning at each time
 track_centroid = [] # Centroid list for adding in new tracked cluster center
+
 for j in range(time_interval):
     # Extract Coordinates' Information from the Total Lightning Dataframe
     IC, CG, ICCG = ICCG_Collect(current_start_time, current_end_time, df_date, area_polygon)
@@ -67,7 +108,7 @@ for j in range(time_interval):
         ICCG["Cluster_Label"] = clustering.labels_
     
         # Generate the list for storing the clustering type (label) without the outlier(s)
-        try:    
+        try:
             cluster_list = clustering.labels_
             cluster_list = list(filter(lambda cluster_list: cluster_list != -1, cluster_list))
             check_cluster = list(set(cluster_list))
@@ -148,12 +189,17 @@ for j in range(time_interval):
             track_cluster[i].append("NaN")
 
 # Fill 0 to the first cluster lightning amount list if the first strike
-if len(track_TS[0]) < time_interval:
-    track_TS[0] = [0] * (time_interval - len(track_TS[0])) + track_TS[0]
+try:
+    if len(track_TS[0]) < time_interval:
+        track_TS[0] = [0] * (time_interval - len(track_TS[0])) + track_TS[0]
+        track_cluster[0] = ["NaN"] * (time_interval - len(track_cluster[0])) + track_cluster[0]
+except:
+    track_TS[0] = [0] * time_interval
+    track_cluster[0] = ["NaN"] * time_interval
 
 # Store the lightning amount at each time-interval within the selected tracked cluster to csv
 df_cluster = pd.DataFrame.from_dict(track_TS)
-df_cluster.to_csv('Cluster_TSCSV/' + case_study + '.csv', index=False, header=True)
+df_cluster.to_csv(main_dir_ts + "/" + case_study + '.csv', index=False, header=True)
 
 # ###########################################Start Cluster Plotting##########################################
 # ##########################################Start Centroid Recording#########################################
@@ -181,7 +227,7 @@ for j in range(time_interval):
         ICCG["Cluster_Label"] = clustering.labels_
         for k in target_cluster_track:
             ''' 
-            This Sectin is only for Visualisation purpose, please ignore it if plot is unnecessary
+            This Section is only for Visualisation purpose, please ignore it if plot is unnecessary
             ax = plt.axes(projection = ccrs.PlateCarree())
             plt.suptitle("Brisbane Lightning Cluster" + '\n' + str(current_start_time))
             ax.set_extent([min_lon, max_lon, min_lat, max_lat], ccrs.PlateCarree())
@@ -200,10 +246,15 @@ for j in range(time_interval):
             centroid_record_list = centroid_record_func(centroid_record_list, track_cluster, k, j, ICCG, False)
 
 # Store the target cluster(s)' information to csv for further usage
-dir_path = os.path.join('Cluster_InfoCSV/', case_study)
+dir_path = os.path.join(main_dir, case_study)
 if not os.path.isdir(dir_path):
     os.mkdir(dir_path)
 for i in range(len(centroid_record_list)):    
     df_centroid = pd.DataFrame.from_dict(centroid_record_list[i])
-    file_path = 'Cluster_InfoCSV/' + case_study + "/" + case_study + "_Cluster" + str(i) + '.csv'
+    file_path = main_dir + "/" + case_study + "/" + case_study + "_Cluster" + str(i) + '.csv'
     df_centroid.to_csv(file_path, index=False, header=True)
+
+# End Parallel Processing
+local_result = case_date
+result = comm.gather(local_result, root=0)
+if (rank == 0): print(result)
