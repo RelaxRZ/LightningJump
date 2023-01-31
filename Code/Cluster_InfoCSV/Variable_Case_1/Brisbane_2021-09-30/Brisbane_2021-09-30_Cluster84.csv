@@ -1,0 +1,721 @@
+Coordinate,Scale_KM,TOT_dense,IC_num,CG_num,IC_amp,CG_amp,LJ,Sigma,Time,radar_ID,radar_Coor,max_SHI,nonneg_90_SHI,time_SHI,coor_SHI,valid_size_SHI,invalid_size_SHI,valid_range_SHI
+,0.0,0.0,0,0,0.0,0.0,,,00:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,00:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,01:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,02:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,03:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,04:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,05:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,06:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,07:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,08:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,09:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,10:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,11:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,12:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,13:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,14:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,15:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,16:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,17:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,18:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,19:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,20:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.02326179310342, -25.012389137931045]",10.13,0.09,28,1,173.688,17.024,,,21:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+,0.0,0.0,0,0,0.0,0.0,,,21:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.54173515384616, -24.991336653846158]",3.116,0.852,24,2,111.986,37.818,,,21:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.54387546153845, -25.019294576923077]",4.569,0.396,22,4,91.977,110.342,False,0.0,21:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.36744988888887, -25.087847749999998]",20.065,0.028,36,0,156.941,0.0,False,0.86003,21:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.03873796969697, -24.572193333333328]",14.262,0.052,31,2,192.404,15.135,False,-0.26393,21:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.07359434615384, -24.570734615384612]",12.64,0.052,26,0,127.4,0.0,False,-0.58784,21:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.15931746874998, -24.714547218750006]",16.77,0.036,32,0,148.552,0.0,False,0.45395,21:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.6222718965517, -25.043236793103446]",4.447,0.467,28,1,81.168,23.393,False,-0.439,21:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.61717863636363, -25.06487503636363]",5.704,0.538,52,3,252.322,72.998,Jump_0,3.66597,21:50:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.56536902380952, -25.06097238095237]",13.595,0.072,42,0,172.147,0.0,Jump_0,-0.97797,21:52:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.66569074999998, -25.029588208333333]",6.571,0.177,24,0,93.348,0.0,Jump_0,-1.18508,21:54:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.6652166304348, -25.08512465217392]",4.871,0.617,44,2,118.424,23.02,Jump_0,1.26324,21:56:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.6736431888889, -25.110549222222218]",3.294,2.64,90,0,289.745,0.0,Jump_1,2.18449,21:58:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.68890022988515, -25.115271011494247]",4.529,1.35,85,2,280.025,46.8,Jump_1,-0.11249,22:00:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.70148627631573, -25.121805171052632]",4.532,1.178,73,3,232.725,34.544,Jump_1,-0.42205,22:02:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.70188090625, -25.124367781249994]",4.661,0.938,64,0,236.365,0.0,Jump_1,-0.46685,22:04:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.7223061714286, -25.119334685714282]",5.891,0.321,34,1,107.692,16.841,False,-1.19039,22:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.5408981018519, -24.968835120370382]",30.711,0.036,97,11,422.928,209.065,Jump_2,2.65376,22:08:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.73321022826093, -25.117349576086962]",5.592,0.937,89,3,356.296,67.485,Jump_2,-0.40065,22:10:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.68226640697674, -25.161837133720937]",30.784,0.058,168,4,707.06,130.292,Jump_2,1.95676,22:12:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.75802155284563, -25.13777434959351]",3.785,2.732,117,6,483.345,97.353,Jump_2,-0.92905,22:14:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.767532923077, -25.135273307692316]",6.169,0.87,102,2,477.211,60.638,False,-0.31524,22:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.7888952542373, -25.171467050847458]",9.057,0.229,43,16,230.828,311.631,False,-0.76628,22:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.59783102678563, -24.963785508928574]",36.599,0.027,102,10,506.565,173.874,False,1.01238,22:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.68801761688317, -25.153276681818177]",48.138,0.021,127,27,602.944,539.362,False,0.71207,22:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.71401788659787, -25.14646364948454]",42.159,0.035,179,15,838.037,221.058,False,0.82978,22:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.7517382025315, -25.182764945147696]",39.263,0.049,194,43,790.879,606.247,False,0.9897,22:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.72524680069935, -25.119216734265727]",37.791,0.064,271,15,1216.338,324.355,False,1.21468,22:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.6949076900959, -25.087850025559106]",40.855,0.06,306,7,1286.601,77.651,Jump_3,4.98804,22:30:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.61509452960524, -24.900991273026317]",23.535,0.175,296,8,1109.295,112.181,Jump_3,-1.11035,22:32:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.64557119132644, -24.985979864795897]",32.786,0.116,381,11,1600.25,571.198,Jump_3,3.78692,22:34:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.69823497499988, -25.03150784772725]",33.589,0.124,420,20,1599.07,244.773,Jump_3,1.36267,22:36:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.71508256962008, -25.0475058122363]",35.036,0.123,463,11,1647.493,201.826,Jump_3,0.96002,22:38:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.77770520595536, -25.12731096774195]",37.252,0.092,376,27,1431.742,425.619,Jump_3,-2.01928,22:40:00,No_Radar,No_Radar,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.7815844851485, -25.094699607260726]",33.763,0.085,288,15,1157.171,251.729,False,-1.64924,22:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.83537651960776, -25.133243807189555]",30.371,0.106,287,19,1077.023,511.719,False,0.03704,22:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.77114639490443, -24.955118197452222]",25.213,0.157,306,8,1187.296,74.163,False,0.1226,22:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.8079533969695, -25.0329743060606]",32.304,0.101,312,18,1199.078,386.05,False,0.27964,22:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.76060144664035, -24.92467034782607]",24.676,0.132,242,11,966.768,158.555,False,-1.45368,22:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.69089692045455, -24.847041075757573]",26.538,0.119,239,25,1014.05,440.476,False,0.20289,22:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.76014945000014, -24.92059945333332]",20.413,0.229,281,19,1053.934,295.453,False,0.92378,22:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.78902697523233, -24.988350990712085]",31.784,0.102,295,28,1124.978,520.157,False,0.52563,22:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.7683370445859, -24.90564984076432]",20.409,0.24,293,21,1193.368,317.439,False,-0.19982,22:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.77983538095248, -24.894335007936494]",20.05,0.2,238,14,929.849,255.837,False,-1.39469,23:00:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.8212226678444, -24.940856438162555]",19.955,0.226,269,14,1162.711,112.24,False,0.80918,23:02:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.85322381560292, -24.95030134751772]",18.775,0.255,269,13,943.979,206.357,False,-0.02455,23:04:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.88503967080746, -24.979374608695654]",22.799,0.197,300,22,1221.668,357.123,False,1.09361,23:06:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.89599316619712, -24.993934943661962]",22.167,0.23,337,18,1247.336,298.922,False,0.81946,23:08:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.91939235388725, -24.992046203753368]",22.291,0.239,349,24,1276.049,323.353,False,0.42548,23:10:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.932287331565, -25.032537859416426]",21.289,0.265,338,39,1326.704,570.447,False,0.24726,23:12:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.94537019155842, -25.01710869480519]",24.692,0.161,287,21,1144.861,346.686,False,-3.8834,23:14:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.93678008482144, -24.97072590624999]",23.0,0.135,203,21,755.601,354.762,False,-1.92018,23:16:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.9824874664179, -24.982476891791034]",24.457,0.143,254,14,1016.109,232.858,False,0.82691,23:18:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[153.9947861235521, -24.97528593822395]",19.904,0.208,248,11,1061.106,142.951,False,-0.16049,23:20:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.02374589632103, -25.020775785953173]",22.913,0.181,292,7,1133.688,212.92,False,0.75422,23:22:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.0414693252596, -25.010115474048455]",18.11,0.28,259,30,1095.893,385.558,False,-0.16773,23:24:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.06268068079095, -25.034756675141256]",18.613,0.325,332,22,1188.605,502.279,False,1.25671,23:26:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.08235527368424, -25.020986876315792]",19.678,0.312,363,17,1365.981,321.462,False,0.76988,23:28:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.11558613875604, -25.056154260765535]",16.793,0.472,391,27,1418.967,356.786,False,1.17646,23:30:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.1131062810458, -25.037551799564266]",18.625,0.421,435,24,1793.928,398.439,False,1.49991,23:32:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.20227549633245, -25.12215513691929]",26.985,0.179,389,20,1439.647,467.409,False,-1.82392,23:34:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.21793240789464, -25.156970298245618]",33.096,0.133,426,30,1682.233,406.612,False,1.07501,23:36:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.2635321002386, -25.18029984009545]",36.429,0.1,386,33,1396.15,429.347,False,-0.9229,23:38:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.254592952596, -25.172419460496595]",35.643,0.111,413,30,1570.16,435.995,False,0.50883,23:40:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.27812322802203, -25.167473351648344]",34.526,0.097,346,18,1347.697,326.648,False,-1.74376,23:42:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.25138925203248, -25.16211845799459]",36.385,0.089,348,21,1355.327,422.659,False,0.09496,23:44:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.25730370256423, -25.12873826923078]",35.909,0.096,367,23,1542.338,400.463,False,0.41792,23:46:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.25589973621098, -25.195983645083913]",41.855,0.076,394,23,1525.512,283.9,False,0.61218,23:48:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.3302761468086, -25.24563157872339]",46.274,0.07,454,16,1857.582,259.009,False,1.18429,23:50:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.3442513828452, -25.182796552301248]",44.542,0.077,452,26,1849.089,486.895,False,0.15921,23:52:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.37197855847253, -25.189219133651566]",44.119,0.069,398,21,1599.013,454.324,False,-3.07894,23:54:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.3722981946108, -25.196929146706598]",46.016,0.05,306,28,1306.548,503.232,False,-2.02841,23:56:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+"[154.44292435309282, -25.29011761340207]",47.152,0.056,375,13,1547.447,277.192,,,23:58:00,,,NaN,NaN,NaN,NaN,NaN,NaN,NaN
