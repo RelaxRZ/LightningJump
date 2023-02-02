@@ -46,7 +46,7 @@
 ### data_num_yyyy.csv -- CSV contains number of lightning at each day during the investigated year (yyyy)
 ### yyyy Folder -- Folder contains the CSV for each day's data within the investigated year (yyyy)
 
-# ---------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------
 # Redundant_Code Folder
 ## Python File
 ### preproecss.py -- Code for collecting the lightning amount at each day during the selected date range
