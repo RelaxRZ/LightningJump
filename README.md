@@ -7,13 +7,15 @@
 
 #### 1. CZ_Code Folder
 #### Chi Zhang Folder -- Data Cleaning, Preprocessing, Visualisation, Lightning Jump Detection & SHI Collection
-##### Source code for cleaning the yearly lightning data in all around Australia recorded in CSV
+##### Source code for cleaning the yearly lightning data all around Australia recorded in CSV
 ##### Source code for obtaining the lightning cluster in a specific area within a range of time
 ##### Source code for tracking the lightning cluster movement track in a specific area along the time
 ##### Source code for detecting the lightning jump within each lightning cluster
 ##### Source code for collecting the severe hail index (SHI) information based on the detected lightning jump
-##### Source code for plotting the visualisation of lightning cluster and radar image of severe hail
-##### Folder for storing the generated preprocessed CSV file and visualsation
+##### Source code for plotting the visualisation of lightning clusters and radar images of severe hail
+##### Source code for creating the job submission script based on different sets of variables
+##### Folder for storing the parallel processing job submission script
+##### Folder for storing the generated preprocessed CSV file and visualisation
 
 #### 2. GC_Code Folder
 #### Georgia Cleaver Folder -- Visualisation, Radar Scanning & Case Study
@@ -23,7 +25,12 @@
 ##### Folder for storing the investigated case study
 
 #### 3. JW_Code Folder
-#### Jonathan Wu Folder -- Data Similarity Checking, Visualisation & Validation
+#### Jonathan Wu Folder -- Data Similarity Checking, Validation & Visualisation
+##### Source code for checking the similarity of the SHI data collected from each lightning cluster
+##### Source code for removing redundant SHI information before computing the validation result
+##### Source code for computing the validation result of the severe hail detection model
+##### Source code for plotting the density plots of the validation result
+##### Folder for storing the validation plots
 -----------------------------------------------------------------------------------------------------------------
 
 ### Presentation -- Powerpoint of the Project Final Presentation
