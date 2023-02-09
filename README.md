@@ -16,14 +16,14 @@
 ##### Folder for storing the generated preprocessed CSV file and visualsation
 
 #### 2. GC_Code Folder
-##### LSTM Potential -- Folder of LSTM Code that is constructed during the process of developing each Type of LSTM
-##### Other Code -- Folder of Code that is used in Visualisation if Required
-##### Deprecate Code -- Folder of Code that is Discared (Some csv can be Generated with these Code if Required)
+#### Georgia Cleaver Folder -- Visualisation, Radar Scanning & Case Study
+##### Source code for obtaining the visualisation of severe hail information
+##### Source code for generating the case study of lightning jump matches severe hail
+##### Source code for creating the radar time plot
+##### Folder for storing the investigated case study
 
 #### 3. JW_Code Folder
-##### LSTM Potential -- Folder of LSTM Code that is constructed during the process of developing each Type of LSTM
-##### Other Code -- Folder of Code that is used in Visualisation if Required
-##### Deprecate Code -- Folder of Code that is Discared (Some csv can be Generated with these Code if Required)
+#### Jonathan Wu Folder -- Data Similarity Checking, Visualisation & Validation
 -----------------------------------------------------------------------------------------------------------------
 
 ### Presentation -- Powerpoint of the Project Final Presentation
