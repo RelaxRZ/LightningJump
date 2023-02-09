@@ -6,9 +6,8 @@ This project aims to develop an algorithm to track lightning all around Australi
 ### Code - Source Code of Visualisation, Lightning Jump Detection & Severe Hail Index Collection
 
 #### 1. CZ_Code Folder
-##### LSTM Potential -- Folder of LSTM Code that is constructed during the process of developing each Type of LSTM
-##### Other Code -- Folder of Code that is used in Visualisation if Required
-##### Deprecate Code -- Folder of Code that is Discared (Some csv can be Generated with these Code if Required)
+##### Chi Zhang Folder -- Data Cleaning, Preprocessing, Visualisation, Lightning Jump Detection & SHI Collection
+##### test
 
 #### 2. GC_Code Folder
 ##### LSTM Potential -- Folder of LSTM Code that is constructed during the process of developing each Type of LSTM
