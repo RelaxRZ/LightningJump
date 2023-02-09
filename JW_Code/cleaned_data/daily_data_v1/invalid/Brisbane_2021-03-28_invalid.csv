@@ -1,0 +1,5 @@
+,Coordinate,Scale_KM,TOT_dense,IC_num,CG_num,IC_amp,CG_amp,LJ,Sigma,Time,radar_ID,radar_Coor,max_SHI,nonneg_90_SHI,time_SHI,coor_SHI,valid_size_SHI,invalid_size_SHI,valid_range_SHI,datetime
+56,"[151.99558829687493, -32.70230379687499]",11.01,0.168,59.0,5.0,156.319,63.28,Jump_0,4.09906,14:58:00,4,"[152.0254, -32.7298]",No_File,No_File,No_File,No_File,No_File,No_File,No_File,2021-03-28 14:58:00
+71,"[152.02289051020406, -32.60632067346939]",8.167,0.468,98.0,0.0,307.379,0.0,Jump_1,4.03804,15:32:00,4,"[152.0254, -32.7298]",No_File,No_File,No_File,No_File,No_File,No_File,No_File,2021-03-28 15:32:00
+77,"[152.06827606111116, -32.582421394444445]",6.588,1.32,173.0,7.0,612.511,120.677,Jump_2,6.16785,15:44:00,4,"[152.0254, -32.7298]",No_File,No_File,No_File,No_File,No_File,No_File,No_File,2021-03-28 15:44:00
+101,"[152.21419066071422, -32.49440578571429]",7.581,0.31,54.0,2.0,186.105,27.124,Jump_3,3.40279,16:32:00,4,"[152.0254, -32.7298]",No_File,No_File,No_File,No_File,No_File,No_File,No_File,2021-03-28 16:32:00

@@ -1,0 +1,12 @@
+#!/bin/bash 
+#PBS -l walltime=00:30:00 
+#PBS -l mem=10GB 
+#PBS -l ncpus=1 
+#PBS -l storage=gdata/k10+gdata/hh5+scratch/k10+gdata/er8+scratch/er8+gdata/ra22+gdata/rq0 
+#PBS -l other=hyperthread 
+#PBS -q normal 
+#PBS -P er8 
+module use /g/data3/hh5/public/modules 
+module load conda/analysis3 
+conda 
+python /g/data/er8/lightning/jonathan/file_processing.py /g/data/er8/lightning/chizhang/Cluster_InfoCSV/Variable_Case_2/Brisbane_2021-04-05

@@ -1,0 +1,2 @@
+,Coordinate,Scale_KM,TOT_dense,IC_num,CG_num,IC_amp,CG_amp,LJ,Sigma,Time,radar_ID,radar_Coor,max_SHI,nonneg_90_SHI,time_SHI,coor_SHI,valid_size_SHI,invalid_size_SHI,valid_range_SHI,datetime
+708,"[152.92152982978726, -29.305940510638294]",11.8,0.107,47.0,0.0,212.121,0.0,Jump_0,2.6434,04:48:00,28,"[152.951, -29.622]","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']","['04:51:00', '05:01:00', '05:11:00', '05:21:00', '05:31:00']","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']",10767.0,0.0,0.1188,2021-02-19 04:48:00
