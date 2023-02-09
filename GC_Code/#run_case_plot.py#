@@ -1,0 +1,33 @@
+from netCDF4 import Dataset
+import numpy as np
+from matplotlib import pyplot as plt
+import cftime
+import sys
+import cartopy.crs as ccrs
+import math
+import numpy.ma as ma
+import pandas as pd
+from collections import Counter
+from shapely.geometry import Point
+from shapely.geometry import MultiPoint
+from shapely.geometry.polygon import Polygon
+from datetime import datetime, timedelta, time
+
+
+level2_root = '/g/data/rq0/level_2'
+radar_id = '50' #see the reference file for all radars: https://dapds00.nci.org.au/thredds/fileServer/rq0/radar_site_list.csv
+date_str = '20141127' #format of YYYYMMDD
+
+#read in lightning jump data
+df = pd.read_csv('/g/data/er8/lightning/shared/Cluster_InfoCSV/Brisbane_2014-11-27/Brisbane_2014-11-27_Cluster3.csv')
+
+
+iplot=0
+#loop over this file
+
+
+
+# identify a valid match
+
+iplot=iplot+1
+

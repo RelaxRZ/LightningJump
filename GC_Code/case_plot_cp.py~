@@ -1,0 +1,110 @@
+# Standard libraries
+from netCDF4 import Dataset
+import numpy as np
+from matplotlib import pyplot as plt
+import cftime
+import sys
+import cartopy.crs as ccrs
+import math
+import numpy.ma as ma
+import pandas as pd
+from collections import Counter
+from shapely.geometry import Point
+from shapely.geometry import MultiPoint
+from shapely.geometry.polygon import Polygon
+from datetime import datetime, timedelta, time
+# Configuration
+level2_root = '/g/data/rq0/level_2'
+radar_id = '50' #see the reference file for all radars: https://dapds00.nci.org.au/thredds/fileServer/rq0/radar_site_list.csv
+date_str = '20141127' #format of YYYYMMDD
+timestep1 = 42 #timestep in file to access data
+timestep2 = 43
+timestep3 = 47
+var_name = 'shi' #reflectivity is the reflectivity at an altitude of 2.5km above the radar site, see reference file for radar altitude.
+
+jump_1 = 'jump_7'
+jump_2 = 'jump_8'
+jump_3 = 'jump_9'
+#read in lightning jump data
+df = pd.read_csv('/g/data/er8/lightning/shared/Cluster_InfoCSV/Brisbane_2014-11-27/Brisbane_2014-11-27_Cluster3.csv')
+#separate coordinate into lat/lon
+df[['latitude', 'longitude']] = df['coordinate'].str.split(',', expand=True)
+df['latitude'] = df['latitude'].astype(float)
+df['longitude'] = df['longitude'].astype(float)
+#to extract lj coordinates for jump 1
+lj1_df = df[df['LJ'] == jump_1]
+lj_1 = lj1_df.iloc[0]
+#to extract lj coordinates for jump 2
+lj2_df = df[df['LJ'] == jump_2]
+lj_2 = lj2_df.iloc[0]
+#to extract lj coordinates for jump 3
+lj3_df = df[df['LJ'] == jump_3]
+lj_3 = lj3_df.iloc[0]
+# Extract longitude and latitude values
+lon1= lj_1['longitude']
+lat1 = lj_1['latitude']
+
+lon2= lj_2['longitude']
+lat2 = lj_2['latitude']
+
+lon3= lj_3['longitude']
+lat3 = lj_3['latitude']
+
+
+
+
+
+
+#coordinates and times of LJs
+lons = [153.0341496255815, 153.06359773848234, 152.99161502950824]
+lats = [-27.692577283720933, -27.59393948644986, -27.321860131147552]
+times = ["2014-11-27 06:14:00","2014-11-27 06:28:00","2014-11-27 07:08:00"]
+level2_ffn = level2_root+'/'+radar_id+'/'+var_name.upper()+'/'+radar_id+'_'+date_str+'_'+var_name+'.nc'
+#print('ffn',level2_ffn)
+with Dataset(level2_ffn, mode='r') as fh:
+
+    nsteps=np.count_nonzero(fh.variables[var_name][:,1,1])
+
+#data for lightning jump 1,2,3
+    refl_data1 = fh.variables[var_name][timestep1,:,:]
+    refl_data2 = fh.variables[var_name][timestep2,:,:] 
+    refl_data3 = fh.variables[var_name][timestep3,:,:]
+#timestep data for lightning jump 1
+    time_step1 = fh.variables['time'][timestep1]
+    time_step1 = cftime.num2date(fh.variables['time'][timestep1], fh.variables['time'].getncattr('units'))
+#timestep data for lightning jump 2
+    time_step2 =  fh.variables['time'][timestep2]
+    time_step2 = cftime.num2date(fh.variables['time'][timestep2], fh.variables['time'].getncattr('units'))
+ #timestep data for lightning jump 3   
+    time_step3 =  fh.variables['time'][timestep3]
+    time_step3 = cftime.num2date(fh.variables['time'][timestep3], fh.variables['time'].getncattr('units'))
+   #lat/lon grid for shi data
+    lat_grid = fh.variables['latitude'][:]
+    lon_grid = fh.variables['longitude'][:]
+  #plotting figure  
+    extent = (np.min(lon_grid), np.max(lon_grid), np.min(lat_grid), np.max(lat_grid))
+    fig = plt.figure(figsize=(12, 20), facecolor='w')    
+    ax = plt.axes(projection=ccrs.PlateCarree())
+    cmap1 = plt.get_cmap('Blues')
+    cmap2 = plt.get_cmap('Reds')
+    cmap3 = plt.get_cmap('Greens')
+    cs1 = ax.contourf(lon_grid, lat_grid, refl_data1, np.arange(0,61), transform=ccrs.PlateCarree(), cmap=cmap1,extend = "max")
+    cs2 = ax.contourf(lon_grid, lat_grid, refl_data2, np.arange(0,61),transform=ccrs.PlateCarree(), cmap=cmap2, extend = "max")
+    cs3 = ax.contourf(lon_grid, lat_grid, refl_data3, np.arange(0,61),transform=ccrs.PlateCarree(), cmap=cmap3, extend = "max")
+    ax.set_extent(extent, ccrs.PlateCarree())
+    plt.colorbar(cs1,label = time_step1,extend = "both",shrink=0.4,pad=.04,fraction=.05,aspect=30)
+    plt.colorbar(cs2, label = time_step2, extend = "both", shrink=0.4,pad=.04,fraction=.05,aspect=30)
+    plt.colorbar(cs3, label = time_step3,extend = "both", shrink = 0.4,pad=.04,fraction=.05,aspect=30)
+    colours = ["blue", "red", "green"]
+    ax.scatter(lons, lats ,c=colours, transform=ccrs.PlateCarree())
+for i, (x, y, t) in enumerate(zip(lons, lats, times)):
+    ax.annotate(f'Lightning Jump {i+7} \n {t}', xy=(x, y), xytext=(30, 0), textcoords='offset points', fontsize=12, transform=ccrs.PlateCarree())
+    plt.subplots_adjust(wspace=0.5)
+    plt.title("Lightning Jump 7,8,9 Brisbane 2014-11-27: Cluster 3")
+    ax.coastlines()
+
+#'''All the plots will be stored under the path radar_plot/radar_plot_x_timestep/png, x refers to the timestep at the current stage'''
+plt.savefig('plot_test/' + 'radar_plot2_' + "_timestep.png")
+
+
+
