@@ -1,2 +1,2 @@
 # LightningJump
-BoM Internship Project
+# BoM Internship Project - Lightning Jump Detection & Severe Weather Forecast
