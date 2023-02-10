@@ -33,10 +33,10 @@ else:
     num_date = str(num_date[0] + 1)
 
 # Define the 'Yearly' case study date with parallel processing
-case_date = case_month + num_date
+# case_date = case_month + num_date
 
 # Define the 'Daily' case study date with multiple job submission
-# case_date = case_month
+case_date = case_month
 
 ###########################################Define Lightning Jump##########################################
 # Define the path to the case study for generating the LJ and Sigma Information

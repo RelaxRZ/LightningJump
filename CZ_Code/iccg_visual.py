@@ -7,18 +7,18 @@ from datetime import datetime, timedelta
 from LJ_FUNCTION import spec_year, start_end_row, ICCG_Collect, plot_func, polygon_func, initial_centroid, next_moment_cluster, blank_plot, target_cluster_plot, centroid_record, centroid_record_func
 
 ###############################################Define Variables############################################
-gap = 2
+gap = 1
 hrs = 24
 mins = 60
 date_range = 365
 time_interval = int(hrs * mins / gap)
-case_lat = -20.758
-case_lon = 148.607
-case_range = 5
+case_lat = -29.35
+case_lon = 152.63
+case_range = 8
 DBSCAN_scale = 10
 DBSCAN_dist = 0.24
-case_area = "Mackay"
-case_date = "2021-10-17"
+case_area = "Brisbane"
+case_date = "2014-11-27"
 date_format = "%Y-%m-%d"
 case_study = case_area + "_" + case_date
 
@@ -62,7 +62,7 @@ for j in range(time_interval):
 
     # Plot all the lightning on a single day on a map
     ax = plt.axes(projection = ccrs.PlateCarree())
-    plt.suptitle('Lightning Australia 2022' + "\n" + str(current_start_time))
+    plt.suptitle('Brisbane Lightning' + "\n" + str(current_start_time))
     ax.set_extent([min_lon, max_lon, min_lat, max_lat], ccrs.PlateCarree())
 
     # Plot CG, IG instance point on a map
@@ -72,5 +72,5 @@ for j in range(time_interval):
     plt.legend(loc='lower left')
 
     # Save the Image
-    plt.savefig("ICCG_Plot/" + case_study + "/" + "map_" + str(j) + '.png')
+    plt.savefig("ICCG_Plot/" + "test" + "/" + "map_" + str(j) + '.png')
     plt.show()

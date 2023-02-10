@@ -1,4 +1,5 @@
 import os
+import ast
 import sys
 import json
 import math
@@ -232,10 +233,10 @@ def next_moment_cluster(total_data, check_cluster):
     return centroids
 
 '''Function for Obtaining the Lightning Amount Time-Series Visualisation with Lightning Jump(s) Marked in Red'''
-def ClusterTS_Plot(main_dir, case_dir, gap):
+def ClusterTS_Plot(main_dir, case_dir, gap, var_case):
     # Create sub-directory in ClusterTSPlot folder
-    if not os.path.isdir(os.path.join("Cluster_TSPlot/", case_dir)):
-        os.makedirs(os.path.join("Cluster_TSPlot/", case_dir))
+    if not os.path.isdir(os.path.join("Cluster_TSPlot/", var_case, "Summary/", case_dir)):
+        os.makedirs(os.path.join("Cluster_TSPlot/", var_case, "Summary/", case_dir))
 
     # Obtain the number of cluster from the case_study directory
     cluster_amount = file_count(main_dir + case_dir)
@@ -275,7 +276,182 @@ def ClusterTS_Plot(main_dir, case_dir, gap):
         plt.plot(X_axis, Y_axis, '-bo', markevery = jump_list, mfc='red', mec='k', label = "curve " + str(i))
         plt.legend()
         plt.xticks(X_axis, label_time, rotation='vertical')
-        plt.savefig("Cluster_TSPlot/" + case_dir + "/" + case_dir + "_" + str(i) + ".png")
+        plt.savefig("Cluster_TSPlot/" + var_case + "Summary/" + case_dir + "/" + case_dir + "_" + str(i) + ".png")
+        plt.close()
+
+'''Function for Obtaining the Lightning Amount Timer-Series Plot with Lightning Jump that does not Capture the Radar'''
+def ClusterTS_Plot_NoRadar(main_dir, case_dir, gap, var_case):
+    # Create sub-directory in ClusterTSPlot folder
+    if not os.path.isdir(os.path.join("Cluster_TSPlot/", var_case, "No_Radar/", case_dir)):
+        os.makedirs(os.path.join("Cluster_TSPlot/", var_case, "No_Radar/", case_dir))
+
+    # Obtain the number of cluster from the case_study directory
+    cluster_amount = file_count(main_dir + case_dir)
+
+    # Plot the curve and save it as time-series visulisation
+    # Set the X-axis Label
+    timestamp_list = (pd.date_range("00:00", "23:59", freq = (str(gap) + "min")).time).tolist()
+    for t in range(len(timestamp_list)):
+        timestamp_list[t] = timestamp_list[t].strftime('%H:%M')
+    label_time = timestamp_list.copy()
+    for t in range(len(label_time)):
+        if t % 100 == 0:
+            continue
+        else:
+            label_time[t] = ""
+    X_axis = [*range(0, len(label_time), 1)]
+
+    # Plot all cluster(s)' time-series of lightning amount with Lightning Jump marked in red
+    for i in range(cluster_amount):
+        jump_dict = {}
+        no_radar_list = []
+        case_path =  main_dir + case_dir + "/" + case_dir + "_Cluster" + str(i) + ".csv"
+        case_df = pd.read_csv(case_path)
+        Y_axis = case_df[['IC_num', "CG_num"]].sum(axis = 1).tolist()
+
+        LJ_Info = case_df["LJ"].tolist()
+        LJ_Radar_Info = case_df["radar_ID"].tolist()
+        for j in range(len(LJ_Info)):            
+            if LJ_Info[j] == "False" or LJ_Info[j] == False or type(LJ_Info[j]) == float:
+                continue
+            else:
+                if LJ_Info[j] in jump_dict.keys():
+                    continue
+                else:
+                    jump_dict[LJ_Info[j]] = j
+        jump_list = list(jump_dict.values())
+        
+        for k in jump_list:
+            if LJ_Radar_Info[k] == "No_Radar":
+                no_radar_list.append(k)
+
+        # Plot the TS Plot of the Lightning Cluster with Point-Mark for Lightning Jump that does not Detect Radar
+        plt.plot(X_axis, Y_axis, '-bo', markevery = no_radar_list, mfc='yellow', mec='k', label = "curve " + str(i))
+        plt.legend()
+        plt.xticks(X_axis, label_time, rotation='vertical')
+        plt.savefig("Cluster_TSPlot/" + var_case + "No_Radar/" + case_dir + "/" + case_dir + "_" + str(i) + ".png")
+        plt.close()
+
+'''Function for Obtaining the Lightning Amount Timer-Series Plot with Lightning Jump that does not Capture Valid SHI'''
+def ClusterTS_Plot_NoSHI(main_dir, case_dir, gap, var_case):
+    # Create sub-directory in ClusterTSPlot folder
+    if not os.path.isdir(os.path.join("Cluster_TSPlot/", var_case, "No_SHI/", case_dir)):
+        os.makedirs(os.path.join("Cluster_TSPlot/", var_case, "No_SHI/", case_dir))
+
+    # Obtain the number of cluster from the case_study directory
+    cluster_amount = file_count(main_dir + case_dir)
+
+    # Plot the curve and save it as time-series visulisation
+    # Set the X-axis Label
+    timestamp_list = (pd.date_range("00:00", "23:59", freq = (str(gap) + "min")).time).tolist()
+    for t in range(len(timestamp_list)):
+        timestamp_list[t] = timestamp_list[t].strftime('%H:%M')
+    label_time = timestamp_list.copy()
+    for t in range(len(label_time)):
+        if t % 100 == 0:
+            continue
+        else:
+            label_time[t] = ""
+    X_axis = [*range(0, len(label_time), 1)]
+
+    # Plot all cluster(s)' time-series of lightning amount with Lightning Jump marked in red
+    for i in range(cluster_amount):
+        jump_dict = {}
+        no_shi_list = []
+        case_path =  main_dir + case_dir + "/" + case_dir + "_Cluster" + str(i) + ".csv"
+        case_df = pd.read_csv(case_path)
+        Y_axis = case_df[['IC_num', "CG_num"]].sum(axis = 1).tolist()
+
+        LJ_Info = case_df["LJ"].tolist()
+        LJ_Radar_Info = case_df["radar_ID"].tolist()
+        LJ_SHI_Info = case_df["max_SHI"].tolist()
+        for j in range(len(LJ_Info)):            
+            if LJ_Info[j] == "False" or LJ_Info[j] == False or type(LJ_Info[j]) == float:
+                continue
+            else:
+                if LJ_Info[j] in jump_dict.keys():
+                    continue
+                else:
+                    jump_dict[LJ_Info[j]] = j
+        jump_list = list(jump_dict.values())
+        
+        for k in jump_list:
+            if LJ_Radar_Info[k] != "No_Radar":
+                if LJ_SHI_Info[k] != "No_File":
+                    len_unique_shi = len(set(ast.literal_eval(LJ_SHI_Info[k])))
+                    if len_unique_shi == 1:
+                        if (list(set(ast.literal_eval(LJ_SHI_Info[k])))[0] == "NaN"):
+                            no_shi_list.append(k)
+                else:
+                    no_shi_list.append(k)
+
+        # Plot the TS Plot of the Lightning Cluster with Point-Mark for Lightning Jump that does not Detect Radar
+        plt.plot(X_axis, Y_axis, '-bo', markevery = no_shi_list, mfc='black', mec='k', label = "curve " + str(i))
+        plt.legend()
+        plt.xticks(X_axis, label_time, rotation='vertical')
+        plt.savefig("Cluster_TSPlot/" + var_case + "No_SHI/" + case_dir + "/" + case_dir + "_" + str(i) + ".png")
+        plt.close()
+
+'''Function for Obtaining the Lightning Amount Timer-Series Plot with Lightning Jump that Captures Valid SHI'''
+def ClusterTS_Plot_SHI(main_dir, case_dir, gap, var_case):
+    # Create sub-directory in ClusterTSPlot folder
+    if not os.path.isdir(os.path.join("Cluster_TSPlot/", var_case, "Valid_SHI/", case_dir)):
+        os.makedirs(os.path.join("Cluster_TSPlot/", var_case, "Valid_SHI/", case_dir))
+
+    # Obtain the number of cluster from the case_study directory
+    cluster_amount = file_count(main_dir + case_dir)
+
+    # Plot the curve and save it as time-series visulisation
+    # Set the X-axis Label
+    timestamp_list = (pd.date_range("00:00", "23:59", freq = (str(gap) + "min")).time).tolist()
+    for t in range(len(timestamp_list)):
+        timestamp_list[t] = timestamp_list[t].strftime('%H:%M')
+    label_time = timestamp_list.copy()
+    for t in range(len(label_time)):
+        if t % 100 == 0:
+            continue
+        else:
+            label_time[t] = ""
+    X_axis = [*range(0, len(label_time), 1)]
+
+    # Plot all cluster(s)' time-series of lightning amount with Lightning Jump marked in red
+    for i in range(cluster_amount):
+        jump_dict = {}
+        valid_shi_list = []
+        case_path =  main_dir + case_dir + "/" + case_dir + "_Cluster" + str(i) + ".csv"
+        case_df = pd.read_csv(case_path)
+        Y_axis = case_df[['IC_num', "CG_num"]].sum(axis = 1).tolist()
+
+        LJ_Info = case_df["LJ"].tolist()
+        LJ_Radar_Info = case_df["radar_ID"].tolist()
+        LJ_SHI_Info = case_df["max_SHI"].tolist()
+        for j in range(len(LJ_Info)):            
+            if LJ_Info[j] == "False" or LJ_Info[j] == False or type(LJ_Info[j]) == float:
+                continue
+            else:
+                if LJ_Info[j] in jump_dict.keys():
+                    continue
+                else:
+                    jump_dict[LJ_Info[j]] = j
+        jump_list = list(jump_dict.values())
+        
+        for k in jump_list:
+            if LJ_Radar_Info[k] != "No_Radar":
+                if LJ_SHI_Info[k] != "No_File":
+                    len_unique_shi = len(set(ast.literal_eval(LJ_SHI_Info[k])))
+                    if len_unique_shi != 1:
+                        valid_shi_list.append(k)
+                    else:
+                        if (list(set(ast.literal_eval(LJ_SHI_Info[k])))[0] != "NaN"):
+                            valid_shi_list.append(k)
+                else:
+                    continue
+
+        # Plot the TS Plot of the Lightning Cluster with Point-Mark for Lightning Jump that does not Detect Radar
+        plt.plot(X_axis, Y_axis, '-bo', markevery = valid_shi_list, mfc='pink', mec='k', label = "curve " + str(i))
+        plt.legend()
+        plt.xticks(X_axis, label_time, rotation='vertical')
+        plt.savefig("Cluster_TSPlot/" + var_case + "Valid_SHI/" + case_dir + "/" + case_dir + "_" + str(i) + ".png")
         plt.close()
 
 '''Function for detecting the lightning jump based on a sliding time-series window'''
@@ -306,7 +482,7 @@ def blank_plot(target, minute, time, ax):
     # Plot all the lightning on a single day on a map
     ax.coastlines(resolution='110m')
     plt.legend(loc='lower left')
-    plt.savefig('cluster_test/' + 'cluster_' + str(target) + '/' + str(minute) + "th_minute.png")
+    plt.savefig('/g/data/er8/lightning/chizhang/cluster_test/' + 'cluster_' + str(target) + '/' + str(minute) + "th_minute.png")
 
 '''Function (sub) for plotting the cluster map if there is valid cluster at the investigated period'''
 def cluster_plot(df, target, minute, ax):
@@ -315,7 +491,7 @@ def cluster_plot(df, target, minute, ax):
         plt.plot(df.iloc[i]["longitude"], df.iloc[i]["latitude"], markersize=2, marker='o', color = "red")
     ax.coastlines(resolution='110m')
     plt.legend(loc='lower left')
-    plt.savefig('cluster_test/' + 'cluster_' + str(target) + '/' + str(minute) + "th_minute.png")
+    plt.savefig('/g/data/er8/lightning/chizhang/cluster_test/' + 'cluster_' + str(target) + '/' + str(minute) + "th_minute.png")
 
 '''Function (main) for plotting the cluster track visualisation'''
 def target_cluster_plot(target, target_list, minute, time, ICCG, ax):
@@ -698,3 +874,10 @@ def script_basic(job_file):
     job_file.write("module use /g/data3/hh5/public/modules\n")
     job_file.write("module load conda/analysis3\n")
     job_file.write("conda\n\n")
+
+'''Function for writing the summarised job submission script'''
+def write_summary_job(job_summary, job_type, case_area):
+    with open(job_summary, "w") as job_summary:
+        script_basic(job_summary)
+        for case in range(case_area.shape[0]):
+            job_summary.write("qsub " + "/g/data/er8/lightning/chizhang/Job_Script/" + job_type + "_{var}.qsub\n".format(var=case_area.iloc[case]['Area']))

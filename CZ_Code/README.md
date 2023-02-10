@@ -4,8 +4,8 @@
 ### variable_csse.txt -- txt for storing the variable case and its corresponding set of values
 
 ## Script File (Two Types of Operation Process)
-## (**1**) Process: cluster_track.qsub -> lightning_jump.qsub -> shi_collection.qsub
-## (**2**) Process: cluster_track_job.qsub -> lightning_jump_job.qsub -> shi_collection_job.qsub
+## (**1**) Operation Process: cluster_track.qsub -> lightning_jump.qsub -> shi_collection.qsub
+## (**2**) Operation Process: cluster_track_job.qsub -> lightning_jump_job.qsub -> shi_collection_job.qsub
 ### cluster_track_job.qsub -- Script for the task to generate different case study's lightning cluster
 ### cluster_track.qsub -- Script for the parallel processing to obtain yearly case study's lightning cluster
 ### lightning_jump_job.qsub -- Script for the task to obtain different case study's lightning jump
@@ -46,7 +46,7 @@
 ### data_num_yyyy.csv -- CSV contains number of lightning at each day during the investigated year (yyyy)
 ### yyyy Folder -- Folder contains the CSV for each day's data within the investigated year (yyyy)
 
-# ----------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # Redundant_Code Folder
 ## Python File
 ### preproecss.py -- Code for collecting the lightning amount at each day during the selected date range
@@ -78,5 +78,5 @@
 ## split_cluster_test Folder
 ### Folder for storing the splitted cluster(s) moving path track plot
 
-## Resource Folder (** Contains Informative Data **)
+## Resource Folder (** Contains Informative Data)
 ### Folder for storing the radar station location and case study CSV

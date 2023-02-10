@@ -35,12 +35,12 @@ else:
     num_date = str(num_date[0] + 1)
 
 # Define the 'Yearly' case study date with parallel processing
-case_date = case_month + num_date
-date = case_month_stamp + num_date
+# case_date = case_month + num_date
+# date = case_month_stamp + num_date
 
 # Define the 'Daily' case study date with multiple job submission
-# case_date = case_month
-# date = case_month_stamp
+case_date = case_month
+date = case_month_stamp
 
 # Define variables for extracting the target cluster
 main_path = "/g/data/er8/lightning/chizhang/Cluster_InfoCSV/"
