@@ -13,4 +13,4 @@ module use /g/data3/hh5/public/modules
 module load conda/analysis3
 conda
 
-mpirun python3 /g/data/er8/lightning/chizhang/shi_collection.py -l "Marlborough_,2021-11-22,20211122,0.5,50,2.8,1" >& /g/data/er8/lightning/chizhang/output.log
+mpirun python3 /g/data/er8/lightning/chizhang/shi_collection.py -l "Marlborough_,2021-11-22,20211122,0.5,50,10,9" >& /g/data/er8/lightning/chizhang/output.log
