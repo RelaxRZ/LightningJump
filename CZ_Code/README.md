@@ -78,5 +78,5 @@
 ## split_cluster_test Folder
 #### Folder for storing the splitted cluster(s) moving path track plot
 
-## Resource Folder (** Contains Informative Data)
+## Resource Folder (** Contains Informative Data **)
 #### Folder for storing the radar station location and case study CSV
