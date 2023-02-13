@@ -6,7 +6,7 @@
 ## Script File (Two Types of Operation Process)
 ### (**1**) Operation Process: cluster_track.qsub -> lightning_jump.qsub -> shi_collection.qsub
 ### (**2**) Operation Process: cluster_track_job.qsub -> lightning_jump_job.qsub -> shi_collection_job.qsub
-### Change the code in cluster_track.py, lightning_jump.py, shi_collection.py before changing process
+### (*) Change the code in cluster_track.py, lightning_jump.py, shi_collection.py before changing process
 #### cluster_track_job.qsub -- Script for the task to generate different case study's lightning cluster
 #### cluster_track.qsub -- Script for the parallel processing to obtain yearly case study's lightning cluster
 #### lightning_jump_job.qsub -- Script for the task to obtain different case study's lightning jump
